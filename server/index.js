@@ -19,11 +19,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(CorsOptions));
 
-
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
